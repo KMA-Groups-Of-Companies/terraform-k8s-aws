@@ -1,0 +1,1 @@
+# Vanilla Kubernetes Setup with Terraform on AWS
