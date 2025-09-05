@@ -47,7 +47,7 @@ resource "aws_route_table" "k8s_rt" {
 }
 
 resource "aws_route_table_association" "a" {
-  subnet_id      = aws_subnet.k8s_subnet.id
+  subnet_id      = aws_subnet.k8s_subnet1.id
   route_table_id = aws_route_table.k8s_rt.id
 }
 
@@ -116,7 +116,7 @@ resource "aws_instance" "worker_nodes" {
   ami           = var.ami_id
   instance_type = var.instance_type
   key_name      = var.key_name
-  subnet_id     = aws_subnet.k8s_subnet.id
+  subnet_id     = aws_subnet.k8s_subnet1.id
   vpc_security_group_ids = [aws_security_group.k8s_sg.id]
 
   user_data = data.template_file.install_k8s.rendered
