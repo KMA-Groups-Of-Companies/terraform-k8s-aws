@@ -29,6 +29,7 @@ On the Control Plane Node, run this command. This setup all the control plane co
 sudo kubeadm init --pod-network-cidr=192.168.0.0/16
 ```
 This command will take a few miniutes. As the end, it will print a `kubeadm join` command. Copy this entire command somewhere safe. You will need it for the worker nodes.
+
 3. Configure `kubectl` for your user:
 Still on the control plane, run these command to be able to use `kubectl` as the `ubuntu` user.
 ```
@@ -36,6 +37,7 @@ mkdir -p $HOME/.kube
 sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
 sudo chown $(id -u):$(id -g) $HOME/.kube/config
 ```
+
 4. Install a Pod Network (CNI):
 A kubernetes cluster needs a network add-on to allow pods to communicate. I will use calico.
 ```
