@@ -21,7 +21,7 @@ Terraform has created the ec2 instances on aws, but now you need to initialize K
 1. SSH into the Control Plane Node:
 Use the IP address from the Terraform output. Replace `your-key.pem` with your private key file.
 ```
-ssh -i /path/to/your-key.pem ubuntu@<control_plan_public_ip>
+ssh -i /path/to/your-key.pem ubuntu@<control_plane_public_ip>
 ```
 2. Initialize the Cluster:
 On the Control Plane Node, run this command. This setup all the control plane components.
