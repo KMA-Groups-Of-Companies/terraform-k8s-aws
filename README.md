@@ -45,9 +45,9 @@ You can check the status of the control plane by running kubectl get nodes. It s
 
 5. Join Worker Nodes to the Cluster:
 - SSH into each worker node one by one.
-- Run the `kubeadm join ...` command that you copied from Step 4.2. You will need to run it with `sudo`.
+- Run the `kubeadm join ...` command. You will need to run it with `sudo`.
   
-6. Verify the Cluster:
+1. Verify the Cluster:
 Go back to your SSH session on the control plane node. Run the following command. You should now see all three nodes (1 control-plane, 2 workers) in the `Ready` state.
 ```
 kubectl get nodes
